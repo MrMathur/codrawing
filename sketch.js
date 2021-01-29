@@ -21,9 +21,10 @@ function setup() {
 
 function draw() {
 	if (mouseIsPressed) {
-		fill(currentSetting.col);
-		noStroke();
-		ellipse(mouseX, mouseY, currentSetting.size, currentSetting.size);
+		stroke(currentSetting.col);
+		noFill();
+		strokeWeight(currentSetting.size);
+		line(pmouseX, pmouseY, mouseX, mouseY);
 	}
 }
 
